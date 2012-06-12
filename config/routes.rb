@@ -1,4 +1,8 @@
 TechID::Application.routes.draw do
+  resources :teches
+
+  get "home/index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
