@@ -1,11 +1,11 @@
-class CreateTeches < ActiveRecord::Migration
+class CreateTechIds < ActiveRecord::Migration
   def change
-    create_table :teches do |t|
+    create_table :tech_ids do |t|
       t.string :name
       t.text :description
       t.string :pdf_file_name
       t.integer :tech_id
-      t.String :LO
+      t.string :LO
 
       t.timestamps
     end

@@ -1,10 +1,10 @@
-<%= form_for(@tech) do |f| %>
-  <% if @tech.errors.any? %>
+<%= form_for(@tech_id) do |f| %>
+  <% if @tech_id.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@tech.errors.count, "error") %> prohibited this tech from being saved:</h2>
+      <h2><%= pluralize(@tech_id.errors.count, "error") %> prohibited this tech_id from being saved:</h2>
 
       <ul>
-      <% @tech.errors.full_messages.each do |msg| %>
+      <% @tech_id.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>

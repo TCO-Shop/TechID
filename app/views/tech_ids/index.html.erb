@@ -1,0 +1,31 @@
+<h1>Listing tech_ids</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Pdf file name</th>
+    <th>Tech</th>
+    <th>Lo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tech_ids.each do |tech_id| %>
+  <tr>
+    <td><%= tech_id.name %></td>
+    <td><%= tech_id.description %></td>
+    <td><%= tech_id.pdf_file_name %></td>
+    <td><%= tech_id.tech_id %></td>
+    <td><%= tech_id.LO %></td>
+    <td><%= link_to 'Show', tech_id %></td>
+    <td><%= link_to 'Edit', edit_tech_id_path(tech_id) %></td>
+    <td><%= link_to 'Destroy', tech_id, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tech', new_tech_id_path %>

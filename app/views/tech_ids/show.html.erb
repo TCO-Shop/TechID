@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @tech_id.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @tech_id.description %>
+</p>
+
+<p>
+  <b>Pdf file name:</b>
+  <%= @tech_id.pdf_file_name %>
+</p>
+
+<p>
+  <b>Tech:</b>
+  <%= @tech_id.tech_id %>
+</p>
+
+<p>
+  <b>Lo:</b>
+  <%= @tech_id.LO %>
+</p>
+
+
+<%= link_to 'Edit', edit_tech_id_path(@tech_id) %> |
+<%= link_to 'Back', tech_ids_path %>
