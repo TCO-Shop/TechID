@@ -1,37 +1,10 @@
-<%= form_for(@tech_id) do |f| %>
-  <% if @tech_id.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@tech_id.errors.count, "error") %> prohibited this tech_id from being saved:</h2>
-
-      <ul>
-      <% @tech_id.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :pdf_file_name %><br />
-    <%= f.text_field :pdf_file_name %>
-  </div>
-  <div class="field">
-    <%= f.label :tech_id %><br />
-    <%= f.number_field :tech_id %>
-  </div>
-  <div class="field">
-    <%= f.label :LO %><br />
-    <%= f.text_field :LO %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= simple_form_for(@tech_id) do |f| %>
+	<%= f.input :name %>
+	<%= f.input :college %>
+	<%= f.input :category %>
+	<%= f.input :LO  %>
+	<%= f.input :description %> 
+	<%= f.input :tech_id, :as => :integer %>
+  <%= f.input :pdf, :as => :file %>  
+  <%= f.button :submit, :input_html => {:class => 'button'} %>      
 <% end %>

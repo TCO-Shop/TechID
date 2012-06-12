@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(:version => 20120612192530) do
     t.string   "pdf_file_name"
     t.integer  "tech_id"
     t.string   "LO"
+    t.string   "college"
+    t.string   "category"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
   end

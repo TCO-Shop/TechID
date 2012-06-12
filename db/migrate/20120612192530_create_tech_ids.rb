@@ -6,8 +6,9 @@ class CreateTechIds < ActiveRecord::Migration
       t.string :pdf_file_name
       t.integer :tech_id
       t.string :LO
-
-      t.timestamps
+      t.string :college
+      t.string :category
+       t.timestamps
     end
   end
 end
