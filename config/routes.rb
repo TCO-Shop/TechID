@@ -1,5 +1,4 @@
 TechID::Application.routes.draw do
-  devise_for :users
 
   resources :tech_ids
 
