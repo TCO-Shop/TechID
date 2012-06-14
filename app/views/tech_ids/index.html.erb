@@ -1,31 +1,100 @@
-<h1>Listing tech_ids</h1>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>TechIDs TCO</title>
+</head>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Pdf file name</th>
-    <th>Tech</th>
-    <th>Lo</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<body>
+<div id="container">
+		<div id="header">
+        	<h1>TCO<span class="off">TechIDs</span></h1>
+            <h2>New technologies</h2>
+        </div>   
+        
+        <div id="menu">
+        	<ul>
+            	<li class="menuitem"><a href="/">Home</a></li>
+                <li class="menuitem"><a href="#">About</a></li>
+                <li class="menuitem"><a href="#">Help</a></li>
+               
+            </ul>
+        </div>
+        
+        <div id="leftmenu">
 
-<% @tech_ids.each do |tech_id| %>
-  <tr>
-    <td><%= tech_id.name %></td>
-    <td><%= tech_id.description %></td>
-    <td><%= tech_id.pdf_file_name %></td>
-    <td><%= tech_id.tech_id %></td>
-    <td><%= tech_id.LO %></td>
-    <td><%= link_to 'Show', tech_id %></td>
-    <td><%= link_to 'Edit', edit_tech_id_path(tech_id) %></td>
-    <td><%= link_to 'Destroy', tech_id, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
+        <div id="leftmenu_top"></div>
 
-<br />
+				<div id="leftmenu_main">    
+                
+                <h3>Links</h3>
+                        
+                <ul>
+                    <li><%= link_to "Technologies", tech_ids_path %></li>
+                    <li><a href="#">Reviewed</a></li>
+                    <li><a href="#">Passed</a></li>
+                    <li><a href="#">Unreviewed</a></li>
+                    <li><a href="#">Advisors</a></li>
+                    
+                </ul>
+</div>
+                
+                
+              <div id="leftmenu_bottom"></div>
+        </div>
+        
+        
+        
+        
+		<div id="content">
+        
+        
+        <div id="content_top"></div>
+        <div id="content_main">
+        	<h2><table>
+					  <tr>
+					    <th>Name</th>
+					    <th>Description</th>
+					    <th></th>
+					    <th>TechId</th>
+					    <th>Lo</th>
+					    <th></th>
+					    <th></th>
+					    <th></th>
+					  </tr>
 
-<%= link_to 'New Tech', new_tech_id_path %>
+					<% @tech_ids.each do |tech_id| %>
+					  <tr>
+					    <td><%= tech_id.name %></td>
+					    <td><%= tech_id.description %></td>
+					    <td><%= tech_id.pdf_file_name %></td>
+					    <td><%= tech_id.tech_id %></td>
+					    <td><%= tech_id.LO %></td>
+					    <td><%= link_to 'Show', tech_id %></td>
+					    <td><%= link_to 'Edit', edit_tech_id_path(tech_id) %></td>
+					    <td><%= link_to 'Destroy', tech_id, confirm: 'Are you sure?', method: :delete %></td>
+					  </tr>
+					<% end %>
+					</table>
+
+					<br />
+
+					<%= link_to 'New Tech', new_tech_id_path %></h2>
+        	<p>&nbsp;</p>
+           	<p>&nbsp;</p>
+       	  <h3></h3>
+       	  <p> <%= link_to "Technologies", tech_ids_path %>.</p>
+        	<p>&nbsp;</p>
+
+          <p></p>
+<p>&nbsp;</p>
+        </div>
+        <div id="content_bottom"></div>
+            
+     </div>
+   </div>
+</body>
+</html>
+
+

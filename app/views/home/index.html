@@ -52,12 +52,19 @@
         
         <div id="content_top"></div>
         <div id="content_main">
-        	<h2>New Techs</h2>
+        	<h2>Please Sign In</h2
+						<%= form_for("Admin", :url => admin_session_path) do |f| %>
+						  <%= f.text_field :email %>
+						  <%= f.password_field :password %>
+						  <%= f.check_box :remember_me %>
+						  <%= f.label :remember_me %>
+						  <%= f.submit 'Sign in' %>
+						  <%= link_to "Forgot your password?", new_password_path('Admin') %>
+						<% end %>
         	<p>&nbsp;</p>
            	<p>&nbsp;</p>
        	  <h3></h3>
-       	  <p> <%= link_to "Technologies", tech_ids_path %>.</p>
-        	<p>&nbsp;</p>
+       	 
 
           <p></p>
 <p>&nbsp;</p>

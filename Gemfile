@@ -1,11 +1,11 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.6'
-
+gem 'kendoui-rails'
 gem 'sqlite3'
 gem 'simple_form'
-
-
+gem 'devise'
+gem 'paperclip'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

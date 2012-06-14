@@ -1,6 +1,7 @@
 class TechIdsController < ApplicationController
   # GET /tech_ids
   # GET /tech_ids.json
+
   def index
     @tech_ids = TechId.all
 

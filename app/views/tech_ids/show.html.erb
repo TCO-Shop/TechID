@@ -1,30 +1,94 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>TechIDs TCO</title>
+</head>
 
-<p>
-  <b>Name:</b>
-  <%= @tech_id.name %>
-</p>
+<body>
+<div id="container">
+		<div id="header">
+        	<h1>TCO<span class="off">TechIDs</span></h1>
+            <h2>New technologies</h2>
+        </div>   
+        
+        <div id="menu">
+        	<ul>
+            	<li class="menuitem"><a href="/">Home</a></li>
+                <li class="menuitem"><a href="#">About</a></li>
+                <li class="menuitem"><a href="#">Help</a></li>
+               
+            </ul>
+        </div>
+        
+        <div id="leftmenu">
 
-<p>
-  <b>Description:</b>
-  <%= @tech_id.description %>
-</p>
+        <div id="leftmenu_top"></div>
 
-<p>
-  <b>Pdf file name:</b>
-  <%= @tech_id.pdf_file_name %>
-</p>
+				<div id="leftmenu_main">    
+                
+                <h3>Links</h3>
+                        
+                <ul>
+                    <li><%= link_to "Technologies", tech_ids_path %></li>
+                    <li><a href="#">Reviewed</a></li>
+                    <li><a href="#">Passed</a></li>
+                    <li><a href="#">Unreviewed</a></li>
+                    <li><a href="#">Advisors</a></li>
+                    
+                </ul>
+</div>
+                
+                
+              <div id="leftmenu_bottom"></div>
+        </div>
+        
+        
+        
+        
+		<div id="content">
+        
+        
+        <div id="content_top"></div>
+        <div id="content_main">
+        	<p id="notice"><%= notice %></p>
 
-<p>
-  <b>Tech:</b>
-  <%= @tech_id.tech_id %>
-</p>
+					<p>
+					  <b>Name:</b>
+					  <%= @tech_id.name %>
+					</p>
 
-<p>
-  <b>Lo:</b>
-  <%= @tech_id.LO %>
-</p>
+					<p>
+					  <b>Description:</b>
+					  <%= @tech_id.description %>
+					</p>
+
+					<p>
+					  <b>Pdf file name:</b>
+					  <%= @tech_id.pdf_file_name %>
+					</p>
+
+					<p>
+					  <b>Tech:</b>
+					  <%= @tech_id.tech_id %>
+					</p>
+
+					<p>
+					  <b>Lo:</b>
+					  <%= @tech_id.LO %>
+					</p>
+
+          <p><%= link_to 'Edit', edit_tech_id_path(@tech_id) %> |</p>
+<p>&nbsp;</p>
+        </div>
+        <div id="content_bottom"></div>
+            
+     </div>
+   </div>
+</body>
+</html>
 
 
-<%= link_to 'Edit', edit_tech_id_path(@tech_id) %> |
-<%= link_to 'Back', tech_ids_path %>
+
+
