@@ -73,7 +73,7 @@
 					    <td><%= tech_id.LO %></td>
 					    <td><%= link_to 'Show', tech_id %></td>
 					    <td><%= link_to 'Edit', edit_tech_id_path(tech_id) %></td>
-					    <td><%= link_to 'Destroy', tech_id, confirm: 'Are you sure?', method: :delete %></td>
+					    <td><%= link_to 'Destroy', tech_id_path(@tech_ids), :method => :delete, :confirm => 'Are you sure?' %></td>
 					  </tr>
 					<% end %>
 					</table>

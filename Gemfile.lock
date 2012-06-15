@@ -108,6 +108,7 @@ PLATFORMS
 
 DEPENDENCIES
   devise
+  jquery-rails
   kendoui-rails
   paperclip
   rails (= 3.2.6)
